@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+</head>
+<body>
+    
+    <!-- <div id="firstDiv" class="allDivs"> First Div </div> -->
+    <!-- <table>
+        <tr>
+            <td> One </td>
+            <td> Two </td>
+        </tr>
+        <tr>
+            <td>Three</td>
+            <td>Four</td>
+        </tr>
+    </table> -->
+
+    <button id="clickBtn"> Click Me </button>
+    <script>
+        //Root Node
+        //console.log(document.documentElement)
+        //console.log(document.body)
+        //console.log(document.head)
+
+        //Childrens
+        //console.log(document.body.childNodes)
+        //console.log(document.body.children)
+
+        //console.log(document.body.firstChild)
+        //console.log(document.body.lastChild)
+        //console.log(document.body.firstElementChild)
+        //console.log(document.body.lastElementChild)
+
+        //const childrensOfBody = Array.from(document.body.children)
+        //console.log(childrensOfBody)
+        
+
+        //siblings
+        // const ulTag=document.body.children[0]
+        // const firstLi = ulTag.children[0]
+        // const secondLi=ulTag.children[1]
+        // console.log(secondLi.previousElementSibling.textContent)
+        
+    
+        //Table DOM Manipulation
+        // const tableTag=document.body.children[1]
+        // console.log(tableTag.rows)
+        // console.log(tableTag.rows[0].cells[1].textContent)
+        // console.log(tableTag.rows[0].cells[1].style="background-color:blue;")
+
+        //ID search
+        //element.style.background="red"
+        // const ulTag = document.getElementById("element")
+        // ulTag.style.backgroundColor = "red"
+
+        //Class Search
+        // listItem = document.getElementsByClassName("list-item")
+        // console.log(document.getElementsByTagName("table"))
+
+        //query selectors
+        // const listItems=document.querySelectorAll('ul > li:nth-child(2)')  //li which is child of ul and is second child
+        // console.log(listItems[0].textContent)
+
+        //attribute selectors
+        // console.log(element.getAttribute('data'));
+        // console.log(element.setAttribute('order-placed','pending'));
+        // console.log(element.getAttribute('order-placed'));
+        // console.log(element.hasAttribute('data'));
+        // console.log(element.attributes);
+
+        //creating and removing the node elements
+        // const newDiv = document.createElement('div')
+        // const newText = document.createTextNode('Namaste World')
+        // newDiv.appendChild(newText)
+        // document.body.append(newDiv)
+        // document.body.prepend(newDiv)
+        // document.body.before(newDiv)
+
+        //to replace
+        // firstDiv.replaceWith(newDiv)
+
+        // to remove
+        // firstDiv.remove()
+
+        //use innerhtml to put the html code
+    //     newDiv.innerHTML=`<ul id="element" data="valid">
+    //     <li class="list-item">First Element</li>
+    //     <li class="list-item">Second Element</li>
+    //     <li class="list-item">Third Element</li>
+    // </ul>`
+    //     document.body.append(newDiv)
+
+    //Events
+    function callMe(){
+        alert("Thanks for giving")
+    }
+    //clickBtn.onclick=callMe
+    function callMe(event)
+    {
+        console.log(event.type)
+        console.log(event.currentTarget)
+        console.log(event.clientY)
+        console.log(event.clientX)
+        alert("Thanks for Watching")    
+    }
+    //addeventlistener
+    clickBtn.addEventListener('click',callMe)
+    // clickBtn.addEventListener('click',function(){
+    //     alert("Thanks")
+    // })
+    // clickBtn.removeEventListener('click',callMe)
+    
+    </script>
+</body>
+</html>
